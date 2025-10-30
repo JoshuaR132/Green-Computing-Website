@@ -1,10 +1,54 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout>
-<section class="text-center py-10">
-<h1 class="text-4xl font-bold mb-4">Welcome to GreenBytes </h1>
-<p class="text-lg mb-6">Learn how to make your technology habits more eco-friendly.</p>
-<a href="/articles" class="bg-green-600 text-white px-4 py-2 rounded">Read Articles</a>
-</section>
+  <!-- Hero Section -->
+  <section class="bg-green-600 text-white py-20 px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to GreenBytes</h1>
+    <p class="text-lg md:text-2xl mb-6">Your guide to eco-friendly computing habits.</p>
+    <a href="/articles" class="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition">Read Articles</a>
+  </section>
+
+  <!-- Article Cards Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 text-center">Green Computing Tips</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Save Energy</h3>
+        <p>Enable dark mode, reduce screen brightness, and turn off unused devices.</p>
+      </div>
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Recycle Electronics</h3>
+        <p>Donate or recycle old electronics responsibly to reduce e-waste.</p>
+      </div>
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Optimize Code</h3>
+        <p>Efficient software uses less energy, write clean, performant code.</p>
+      </div>
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Cloud Sustainability</h3>
+        <p>Choose green hosting and cloud providers that use renewable energy.</p>
+      </div>
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Responsible Printing</h3>
+        <p>Print only when necessary and use recycled paper or double-sided printing.</p>
+      </div>
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Upgrade Thoughtfully</h3>
+        <p>Extend device life with upgrades instead of replacing hardware unnecessarily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-4 bg-gray-50 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">About GreenBytes</h2>
+    <p class="text-lg mb-4">
+      GreenBytes is dedicated to spreading awareness about sustainable computing. 
+      We cover topics such as energy-efficient hardware, green web design, and responsible recycling.
+    </p>
+    <p class="text-lg">
+      Our mission is to help you make small changes that have a big environmental impact.
+    </p>
+  </section>
 </BaseLayout>
