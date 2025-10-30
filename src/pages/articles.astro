@@ -1,11 +1,56 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+
+const articles = [
+  {
+    title: "Save Energy",
+    description: "Reduce your carbon footprint by using dark mode, lowering screen brightness, and managing power settings efficiently.",
+    icon: "💡",
+    link: "#",
+  },
+  {
+    title: "Recycle Electronics",
+    description: "Donate or recycle old devices responsibly to prevent e-waste and support sustainable tech practices.",
+    icon: "♻️",
+    link: "#",
+  },
+  {
+    title: "Optimize Code",
+    description: "Efficient code uses fewer CPU cycles, leading to lower energy consumption across millions of devices.",
+    icon: "⚙️",
+    link: "#",
+  },
+]
 ---
+
 <BaseLayout>
-<h2 class="text-3xl font-semibold mb-4">Articles</h2>
-<ul class="list-disc pl-6 space-y-2">
-<li><strong>Save Energy:</strong> Use dark mode and lower screen brightness.</li>
-<li><strong>Recycle:</strong> Donate or recycle old electronics responsibly.</li>
-<li><strong>Optimize Code:</strong> Efficient algorithms mean less energy waste.</li>
-</ul>
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-green-600 mb-2">Green Computing Articles</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Explore practical tips and insights on sustainable technology, energy efficiency, and responsible computing.
+      </p>
+    </header>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {articles.map((article) => (
+        <article
+          class="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 border border-gray-100 flex flex-col"
+        >
+          <div class="text-4xl mb-4">{article.icon}</div>
+          <h2 class="text-xl font-semibold text-gray-800 mb-2">
+            {article.title}
+          </h2>
+          <p class="text-gray-600 flex-1">{article.description}</p>
+
+          <a
+            href={article.link}
+            class="mt-4 inline-block text-green-600 hover:text-green-700 font-medium text-sm"
+          >
+            Read more →
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
 </BaseLayout>
