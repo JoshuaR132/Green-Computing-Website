@@ -1,51 +1,82 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const articles = [
   {
     title: "Save Energy",
-    description: "Reduce your carbon footprint by using dark mode, lowering screen brightness, and managing power settings efficiently.",
+    description:
+      "Reduce your carbon footprint by using dark mode, lowering screen brightness, and managing power settings efficiently.",
     icon: "💡",
     link: "#",
   },
   {
     title: "Recycle Electronics",
-    description: "Donate or recycle old devices responsibly to prevent e-waste and support sustainable tech practices.",
+    description:
+      "Donate or recycle old devices responsibly to prevent e-waste and support sustainable tech practices.",
     icon: "♻️",
     link: "#",
   },
   {
     title: "Optimize Code",
-    description: "Efficient code uses fewer CPU cycles, leading to lower energy consumption across millions of devices.",
+    description:
+      "Efficient code uses fewer CPU cycles, leading to lower energy consumption across millions of devices.",
     icon: "⚙️",
     link: "#",
   },
-]
+  {
+    title: "Choose Green Hosting",
+    description:
+      "Select web hosts powered by renewable energy to reduce the environmental impact of your online presence.",
+    icon: "🌐",
+    link: "#",
+  },
+  {
+    title: "Sustainable Hardware",
+    description:
+      "Buy durable, repairable hardware and support manufacturers that prioritize eco-friendly production.",
+    icon: "🖥️",
+    link: "#",
+  },
+  {
+    title: "Cloud Efficiency",
+    description:
+      "Use scalable cloud services wisely and clean up unused resources to minimize energy waste.",
+    icon: "☁️",
+    link: "#",
+  },
+];
 ---
 
 <BaseLayout>
-  <section class="max-w-6xl mx-auto px-6 py-16">
-    <header class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-green-600 mb-2">Green Computing Articles</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto">
+  <section class="max-w-6xl mx-auto px-6 py-16 transition-colors duration-300">
+    <!-- Page Header -->
+    <header class="text-center mb-14">
+      <h1 class="text-4xl font-bold text-green-600 dark:text-green-400 mb-3">
+        Green Computing Articles
+      </h1>
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
         Explore practical tips and insights on sustainable technology, energy efficiency, and responsible computing.
       </p>
+      <div class="mt-4 h-1 w-24 bg-green-500 dark:bg-green-400 mx-auto rounded-full"></div>
     </header>
 
+    <!-- Article Grid -->
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {articles.map((article) => (
         <article
-          class="bg-white shadow-md hover:shadow-lg transition rounded-2xl p-6 border border-gray-100 flex flex-col"
+          class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col p-6"
         >
           <div class="text-4xl mb-4">{article.icon}</div>
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">
+          <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
             {article.title}
           </h2>
-          <p class="text-gray-600 flex-1">{article.description}</p>
+          <p class="text-gray-600 dark:text-gray-300 flex-1">
+            {article.description}
+          </p>
 
           <a
             href={article.link}
-            class="mt-4 inline-block text-green-600 hover:text-green-700 font-medium text-sm"
+            class="mt-5 inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-medium text-sm hover:gap-2 transition-all"
           >
             Read more →
           </a>
