@@ -1,16 +1,10 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+<section class="text-center py-10">
+<h1 class="text-4xl font-bold mb-4">Welcome to GreenBytes </h1>
+<p class="text-lg mb-6">Learn how to make your technology habits more eco-friendly.</p>
+<a href="/articles" class="bg-green-600 text-white px-4 py-2 rounded">Read Articles</a>
+</section>
+</BaseLayout>

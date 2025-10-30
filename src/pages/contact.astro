@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+<BaseLayout>
+<h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+<p class="mb-4">We’d love to hear from you! Send feedback or article ideas below.</p>
+<form class="flex flex-col gap-3 max-w-md">
+<input type="text" placeholder="Name" class="border p-2 rounded" required />
+<input type="email" placeholder="Email" class="border p-2 rounded" required />
+<textarea placeholder="Message" class="border p-2 rounded" rows="5"></textarea>
+<button type="submit" class="bg-green-700 text-white py-2 rounded">Send</button>
+</form>
+</BaseLayout>

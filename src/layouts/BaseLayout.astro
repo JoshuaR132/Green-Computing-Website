@@ -1,18 +1,19 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/input.css';
 ---
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GreenBytes</title>
-</head>
-<body class="bg-white text-gray-800 font-sans">
-<Header />
-<main class="p-6 max-w-4xl mx-auto">
-<slot />
-</main>
-<Footer />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenBytes</title>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <Header />
+    <main class="p-6 max-w-4xl mx-auto">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
