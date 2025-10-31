@@ -4,7 +4,6 @@ A green computing website built with [Astro](https://astro.build/) and [Tailwind
 
 ## Features
 
-- Dark mode toggle
 - Responsive design
 - Article listings and tips on eco-friendly computing
 - Contact form
